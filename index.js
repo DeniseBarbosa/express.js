@@ -11,7 +11,7 @@ const res = require("express/lib/response");
 const app = express();
 
 app.get("/", function (req, resp) {
-    resp.send("<h1>Aqui está a sua resposta</h1>");
+    resp.send("<h1>Aqui está a sua resposta, estamos testando o NODEMON</h1>");
 });
 
 // Em resumo, este código define uma rota para o blog do
@@ -20,9 +20,19 @@ app.get("/blog", function (req, resp) {
     resp.send("<h1>Bem vindo ao meu blog</h1>");
 });
 
-app.get("/site", function (req, resp) {
+//parametro não obrigatorio > lembre-se tem que colocar ?
+app.get("/site/:sobre?", function (req, resp) {
     resp.send("<h1>Bem vindo ao meu site</h1>");
 });
+
+//parametros obriatorios > lembre-se que tem que passa os 3 paramentros ola/denise/pereira
+app.get("/ola/:nome/:sobrenome", function (req, resp) {
+    var nome = req.params.nome;
+    var sobrenome = req.params.sobrenome;
+    resp.send("<h1>Olá " + nome + ", seu sobrenome é " + sobrenome + "</h1>")
+
+})
+
 
 // Neste código, estamos inicializando o servidor na porta 4000 e definindo uma função callback para ser chamada quando o
 //  servidor estiver pronto. A função callback verifica se ocorreu algum erro durante a inicialização do servidor e exibe uma 

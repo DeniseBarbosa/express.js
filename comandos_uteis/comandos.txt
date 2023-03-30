@@ -1,0 +1,12 @@
+Nodemon é uma ferramenta de desenvolvimento em Node.js que monitora os arquivos 
+do projeto e reinicia automaticamente o servidor sempre que uma alteração é detectada. 
+Ele ajuda a economizar tempo e esforço, permitindo que os desenvolvedores se concentrem apenas 
+na escrita de código. O Nodemon é fácil de usar, pode ser instalado globalmente ou localmente, 
+funciona com a maioria dos frameworks e bibliotecas em Node.js e pode ser 
+configurado de acordo com as necessidades do projeto.
+
+terminal: > npm install -g nodemon
+em seguida > nodemon nomeArquivo.js
+é necessario iniciar aplicação com esse comando > nodemon nomeArquivo.js para que a atualização seja
+ aplicada
+automaticamente
